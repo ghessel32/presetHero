@@ -33,11 +33,11 @@ function BackgroundCode() {
 {/* ⚠️ Keep this wrapper absolute for layout safety */}
 
     <div
-        className="w-full h-full"
+        className="w-full h-full absolute"
         style={{
           backgroundImage: 'url(/bgImage)',
-          backgroundSize: ${bgImage.size},
-          backgroundPosition: '${bgImage.positionX}% ${bgImage.positionY}%'
+          backgroundSize: '${bgImage.size}',
+          backgroundPosition: '${bgImage.positionX}% ${bgImage.positionY}%',
           backgroundRepeat: "no-repeat",
         }}
       />
