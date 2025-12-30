@@ -14,7 +14,6 @@ function BgSettings() {
   return (
     <div>
       <h1 className="mb-4 text-lg font-bold">Background</h1>
-
       <div className="p-6">
         {/* Background Type */}
         <Select
@@ -87,8 +86,10 @@ function BgSettings() {
         {/* Pattern */}
         {backgroundType === "pattern" && <ColorPatternSettings />}
       </div>
-
-      {backgroundType === "image" && <BgAnimation />}
+      {/* Background Animation */}
+      {(backgroundType === "image" || backgroundType === "pattern") && (
+        <BgAnimation />
+      )}
     </div>
   );
 }

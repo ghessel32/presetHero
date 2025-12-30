@@ -106,7 +106,6 @@ function BackgroundCode() {
              background: "${getGradientStyle()}",
               opacity: ${opacity},
               }}>
-              
             </div>
             
 {/* ============================== */}
