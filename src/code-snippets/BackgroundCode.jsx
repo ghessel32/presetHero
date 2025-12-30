@@ -44,7 +44,7 @@ function BackgroundCode() {
       ${
         bgImage.overlayColor && bgImage.overlayOpacity > 0
           ? `<div
-        className="w-full h-full z-1"
+        className="w-full h-full z-1 absolute"
         style={{
           backgroundColor: '${bgImage.overlayColor}',
           opacity: ${bgImage.overlayOpacity / 100},
