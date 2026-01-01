@@ -56,7 +56,14 @@ export const useTextStore = create((set) => ({
     maxWidth: "600px",
     marginX: "auto",
     lineHeight: "1.4",
-    fontWeight:600
+    fontWeight: 600,
+  },
+
+  fontConfig: {
+    source: "external",
+    url: "https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap",
+    family: "pacifico",
+    fallback: "sans-serif",
   },
 
   updateStyle: (component, newStyle) =>

@@ -5,21 +5,30 @@ import { VideoComponent } from "../settings/background/VideoSettings";
 import { ImageComponent } from "../settings/background/ImageSetting";
 import { getAnimationProps } from "../utils/getAnimationProps";
 import { ColorPattern } from "../settings/background/ColorPattern";
+import { useTextStore } from "../store/textstyleStore.js";
+import { usePreviewFont } from "../usePreviewFont";
 
 import Centered from "./Centered.jsx";
 
 export default function Hero({ editor = false }) {
+  usePreviewFont();
+
+  const fontConfig = useTextStore((state) => state.fontConfig);
   const bgstyles = usebgstyleStore((state) => state.bgstyles);
   const bgColor = usebgstyleStore((state) => state.bgstyles.bgColor);
   const backgroundType = usebgstyleStore(
     (state) => state.bgstyles.backgroundType
   );
-
   const anim = getAnimationProps(bgstyles.animation);
 
   return (
     <div
-      style={{ backgroundColor: bgColor }}
+      style={{
+        backgroundColor: bgColor,
+        fontFamily: fontConfig.family
+          ? `'${fontConfig.family}', ${fontConfig.fallback}`
+          : undefined,
+      }}
       className={`
         relative overflow-hidden flex flex-col
         ${
