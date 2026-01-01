@@ -25,12 +25,9 @@ export default function Hero({ editor = false }) {
     <div
       style={{
         backgroundColor: bgColor,
-        fontFamily: fontConfig.family
-          ? `'${fontConfig.family}', ${fontConfig.fallback}`
-          : undefined,
       }}
       className={`
-        relative overflow-hidden flex flex-col
+        relative overflow-hidden flex flex-col font-serif
         ${
           editor
             ? "h-[560px] rounded-xl border border-slate-300 shadow-sm bg-white"
