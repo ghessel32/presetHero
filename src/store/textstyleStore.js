@@ -60,9 +60,9 @@ export const useTextStore = create((set) => ({
   },
 
   fontConfig: {
-    source: "external",
-    url: "https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap",
-    family: "pacifico",
+    source: "auto",
+    url: "",
+    family: "",
     fallback: "sans-serif",
   },
 

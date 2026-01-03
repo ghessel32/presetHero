@@ -7,7 +7,6 @@ import { getAnimationProps } from "../utils/getAnimationProps";
 import { ColorPattern } from "../settings/background/ColorPattern";
 import { useTextStore } from "../store/textstyleStore.js";
 import { usePreviewFont } from "../usePreviewFont";
-
 import Centered from "./Centered.jsx";
 
 export default function Hero({ editor = false }) {
@@ -25,6 +24,9 @@ export default function Hero({ editor = false }) {
     <div
       style={{
         backgroundColor: bgColor,
+        fontFamily: fontConfig.family
+          ? `'${fontConfig.family}', ${fontConfig.fallback}`
+          : undefined,
       }}
       className={`
         relative overflow-hidden flex flex-col font-serif
@@ -36,7 +38,7 @@ export default function Hero({ editor = false }) {
       `}
     >
       {/* BACKGROUND (same for editor + preview) */}
-      <div className={`absolute inset-0 ${anim.className}`} style={anim.style}>
+      <div className={`absolute inset-0 ${anim.className} w-full h-full`} style={anim.style}>
         {backgroundType === "dynamic" && <DynamicBg />}
         {backgroundType === "video" && <VideoComponent />}
         {backgroundType === "image" && <ImageComponent />}

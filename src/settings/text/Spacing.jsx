@@ -67,6 +67,7 @@ function Spacing({ target }) {
         {target === "text" && (
           <Input
             label="Max Width"
+            type="number"
             value={parseInt(styles?.maxWidth) || 0}
             onChange={(e) =>
               updateStyle(selected, { maxWidth: `${e.target.value}px` })

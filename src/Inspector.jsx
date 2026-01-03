@@ -6,7 +6,6 @@ import NavbarSettings from "./settings/navbar/NavbarSettings";
 import BgSettings from "./settings/background/BgSettings";
 import TextSettings from "./settings/text/TextSettings";
 import { inspectorRef } from "./refs";
-import ButtonSettings from "./settings/button/ButtonSettings";
 import { useButtonStore } from "./store/buttonstyleStore";
 import HeroLayout from "./settings/heroLayout/HeroLayout";
 import ActionSettings from "./settings/actionSection/ActionSettings";

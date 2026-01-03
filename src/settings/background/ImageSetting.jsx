@@ -30,14 +30,13 @@ function ImageComponent() {
 
   return (
     <>
-      {/* BACKGROUND IMAGE */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none"
+      <img
+        src={bgImage.src}
+        alt="Background"
+        className="absolute inset-0 z-0 w-full h-full"
         style={{
-          backgroundImage: `url(${bgImage.src})`,
-          backgroundSize: bgImage.size,
-          backgroundPosition: `${bgImage.positionX}% ${bgImage.positionY}%`,
-          backgroundRepeat: "no-repeat",
+          objectPosition: `${bgImage.positionX}% ${bgImage.positionY}%`,
+          objectFit: `${bgImage.size}`,
         }}
       />
 
@@ -57,7 +56,6 @@ function ImageComponent() {
 
 function ImageSettings() {
   const { bgImage, updateBGStyle } = usebgstyleStore();
-  const bgColor = usebgstyleStore().bgstyles.bgColor;
 
   return (
     <div>

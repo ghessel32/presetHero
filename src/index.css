@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 /* Fade animation */
 .anim-fade {
   animation: fade-in var(--anim-duration, 0.8s) ease-out var(--anim-delay, 1s)
